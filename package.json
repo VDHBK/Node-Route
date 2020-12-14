@@ -14,5 +14,16 @@
   },
   "devDependencies": {
     "mocha": "^8.2.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VDHBK/NodeRoute.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VDHBK/NodeRoute/issues"
+  },
+  "homepage": "https://github.com/VDHBK/NodeRoute#readme"
 }
