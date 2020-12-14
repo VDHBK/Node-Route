@@ -1,6 +1,6 @@
 const findRoute = require("../findRoute.js");
 const assert = require('assert');
-const edges = findRoute.readEdges('Route.csv');
+const edges = findRoute.readEdges('expects.csv');
 //console.log(edges.length);
 const graph = findRoute.makeGraph(edges);
 const points   = findRoute.getPoints (edges);

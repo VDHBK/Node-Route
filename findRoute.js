@@ -1,11 +1,11 @@
 const fs = require("fs");
 const parse = require('csv-parse/lib/sync');
-
+//ムログを読み込むプログラ
 const readEdges = (file) => {
     const text = fs.readFileSync(file);
     const csv_text = text.toString();
     return parse(csv_text, {
-        columns:["status","node","button","from","to","value","direction","speed"],
+        columns:["node","button","from","to","value","direction","speed"],
         skip_empty_lines: true
     });
 };
@@ -39,7 +39,7 @@ const makeGraph = (edges) => {
     for (let {from,to,value} of edges) {
         const valueInt = parseInt (value);
         addEdge (result, from, to,valueInt);
-        addEdge (result, to, from, valueInt);
+     //   addEdge (result, to, from, valueInt);
     }
     return result;
 };
@@ -100,7 +100,7 @@ const collectPath = (startPointName, endPointName, points) => {
     return {path,value};
 }
 
-const edges = readEdges ('Route.csv');
+const edges = readEdges ('expects.csv');
 
 //console.log (edges);
 // console.log ('=============');
