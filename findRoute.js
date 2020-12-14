@@ -29,7 +29,7 @@ const getPoints = (edges) => {
 
 const getInitPoints = (startPointName, points) => {
     let results = JSON.parse (JSON.stringify (points)); // clone
-    console.log(points);
+   // console.log(points);
     results[startPointName].value = 0;
     return results;
 }
